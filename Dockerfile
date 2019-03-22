@@ -5,9 +5,11 @@ WORKDIR /opt/
 ENV url https://www.google.com
 ENV filename output.txt
 
-RUN apk add --update py-pip git
-RUN git clone https://github.com/Cillian-Collins/dirscraper.git
+RUN apk add --update py-pip git && \
+	git clone https://github.com/Cillian-Collins/dirscraper.git
+
 WORKDIR /opt/dirscraper/
+
 RUN pip install -r requirements.txt
 	
 VOLUME /opt/output
