@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 	
 VOLUME /opt/output
 
-ENTRYPOINT python /opt/dirscraper/dirscraper.py -u $url -o /opt/output/$filename
+ENTRYPOINT python /opt/dirscraper/dirscraper.py -d -u $url -o /opt/output/$filename
